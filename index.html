@@ -1,16 +1,45 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    <script src="script.js"></script>
+<head>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Web App - Simmple Interest Caluclator</title>
+</head>
+<body>
+<div class="calc">
+    <h1>Simple Interest Caluclator</h1>
+    <div class="form">
+        <label for="amount">Amount</label>&emsp;&emsp;&emsp;
+        <input type="text" id="amount" name="amount">
+        <p><lable for="intrsrate">Interest Rate</lable>&emsp;
+        <input type="range" min="0.5 " max="35" value='0.5' class="slider" id="myRange" onchange="updateTextValue(this.value)">
+        &nbsp;&nbsp;
+        <input type="text" id="demo" value="" style="border: transparent; font-weight: bold;" >
+    </p>
+            <label for="years">No. of Years</label>&emsp;
+            <select name="years" id="years">
+                <option value="null">select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <p><button onclick='compute()'>Compute Interest</button></p>
+    </div> 
+    <div class="result">
+        <span  id="a_a"></span> <span id="a" class="highlight"></span>
+        <br><span  id="b_b"></span> <span id="b" class="highlight"></span>
+        <br><span  id="amt_a"></span> <span id="tamt" class="highlight"></span>
+        <br><span  id="totalyear_a"></span> <span id="c" class="highlight"></span>
+    </div>
+</br>
+    <img src="clogo.png" width="20" height="20">Everyone Can Get Rich
+</div> 
+</body>
 </html>
